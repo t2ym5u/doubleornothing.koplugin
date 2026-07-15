@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Quelle est la capitale du Portugal ?",
+    "answer": "Lisbonne",
+    "category": "Géographie"
+  },
+  {
+    "question": "Combien de côtés a un hexagone ?",
+    "answer": "6",
+    "category": "Culture générale"
+  },
+  {
+    "question": "En quelle année l'homme a-t-il marché sur la Lune pour la première fois ?",
+    "answer": "1969",
+    "category": "Histoire"
+  },
+  {
+    "question": "Quel est le plus grand océan du monde ?",
+    "answer": "L'océan Pacifique",
+    "category": "Géographie"
+  }
+]

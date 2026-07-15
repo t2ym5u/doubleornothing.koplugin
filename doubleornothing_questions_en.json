@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the capital of Portugal?",
+    "answer": "Lisbon",
+    "category": "Geography"
+  },
+  {
+    "question": "How many sides does a hexagon have?",
+    "answer": "6",
+    "category": "General knowledge"
+  },
+  {
+    "question": "In what year did humans first land on the Moon?",
+    "answer": "1969",
+    "category": "History"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "The Pacific Ocean",
+    "category": "Geography"
+  }
+]
