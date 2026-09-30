@@ -2,6 +2,10 @@
 
 A **Double or Nothing Party** display plugin for [KOReader](https://github.com/koreader/koreader) — the classic "Quitte ou Double" bet-your-points quiz, played around the table.
 
+## Screenshot
+
+![Screenshot](images/doubleornothing.png)
+
 ## Concept
 
 Teams take turns. On your turn, a question is shown — confer with your team, then reveal the answer. Get it right and you win the pot (1 point the first time, doubled every time after). At each correct answer you choose: bank the pot and end your turn safely, or risk it all on a new question to double it again.
