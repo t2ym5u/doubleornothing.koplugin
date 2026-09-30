@@ -15,13 +15,13 @@ local VerticalSpan   = require("ui/widget/verticalspan")
 local _              = require("i18n")
 
 local MenuHelper = require("menu_helper")
+local Round      = require("round")
 local ScreenBase  = require("screen_base")
 
 local DeviceScreen = Device.screen
 
 local DEFAULT_DURATION = 0    -- seconds to think before reveal (0 = no timer)
 local DEFAULT_NB_TEAMS = 2
-local BASE_POT         = 1    -- pot value after the first correct answer of a turn
 
 local GAME_RULES_EN = _([[
 Double or Nothing Party — Rules
@@ -198,7 +198,7 @@ function DoubleOrNothingScreen:onReveal()
 end
 
 function DoubleOrNothingScreen:onCorrect()
-    self.pot = self.pot == 0 and BASE_POT or self.pot * 2
+    self.pot = Round.nextPot(self.pot)
     self.phase = "choice"
     self:buildLayout()
     UIManager:setDirty(self, function() return "ui", self.dimen end)
@@ -234,7 +234,7 @@ end
 function DoubleOrNothingScreen:_endTurn()
     self.pot           = 0
     self.q_index        = self.q_index + 1
-    self.current_team  = (self.current_team % #self.teams) + 1
+    self.current_team  = Round.nextTeam(self.current_team, #self.teams)
     self.phase          = "idle"
     self:buildLayout()
     UIManager:setDirty(self, function() return "ui", self.dimen end)
