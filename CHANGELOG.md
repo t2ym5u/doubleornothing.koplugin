@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.13] - 2026-10-07
+
+### Fixed
+- The Tools menu entry is translated again. `main.lua` took `_` from
+  KOReader's `gettext`, which knows nothing of this plugin's strings, so the
+  menu label stayed English while the game's own screen, which goes through
+  `i18n`, was translated. `_` now comes from `i18n` here too.
+- `i18n_fr.lua` shipped to the device but was never loaded: nothing called
+  `i18n.extend()` on it, so the whole table was dead weight. main.lua now
+  merges it in before the menu entry is built.
+
+
 ## [1.0.12] - 2026-10-01
 
 ### Fixed
